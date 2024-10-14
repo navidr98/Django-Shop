@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+
+    {% block style %}{% endblock %}
+
+</head>
+<body>
+
+    {% include 'inc/navbar.html' %}
+
+    {% include 'inc/messages.html' %}
+
+    {% block content %}{% endblock %}
+
+    {% include 'inc/footer.html' %}
+
+</body>
+</html>
