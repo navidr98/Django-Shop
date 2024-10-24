@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}ورود{% endblock %}
+
+{% load static %}
+{% block css %}
+
+{% endblock %}
+
+{% block favicon %}
+{% endblock %}
+
+
+{% block content %}
+
+    <form action="" method="post" class="" novalidate>
+        {% csrf_token %}
+
+        {% for field in form %}
+            <div class="">
+                {{ field.errors }}
+            </div>
+        {% endfor %}
+
+        <div class="input-group">
+            {{ form.phone_number }}
+        </div>
+        <div class="input-group">
+            {{ form.password }}
+        </div>
+        <input type="submit" value="ورود" class="">
+    </form>
+
+    <a href="{% url 'accounts:user_register' %}" class="">ثبت نام نکرده اید ؟</a>
+
+{% endblock %}
+
+{% block js %}
+
+{% endblock %}

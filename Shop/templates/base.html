@@ -1,23 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         {% block title %}{% endblock %}
     </title>
 
-    {% block style %}{% endblock %}
+    {% block css %} {% endblock %}
+
+    {% block favicon %} {% endblock %}
 
 </head>
 <body>
+
 
     {% include 'inc/navbar.html' %}
 
     {% include 'inc/messages.html' %}
 
-    {% block content %}{% endblock %}
+    {% block content %} {% endblock %}
 
     {% include 'inc/footer.html' %}
+
+    {% block js %} {% endblock %}
 
 </body>
 </html>

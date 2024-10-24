@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title%}رمز ورود{%endblock%}
+
+{% load static %}
+{% block css %}
+
+{% endblock %}
+
+{% block content %}
+
+    <form action="" method="post" novalidate>
+        {% csrf_token %}
+
+        <div class="">
+            {{ form.as_p }}
+        </div>
+
+        <input class="" type="submit" value="ارسال">
+    </form>
+
+{% endblock %}
+
+
+
+
+
+
